@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TimeTrack | Sign in</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body class="login-page"><main class="login-card"><div class="brand-mark">T</div><h1>Welcome back</h1><p class="muted">Sign in to your productivity workspace.</p>
+{% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<div class="alert">{{ message }}</div>{% endfor %}{% endwith %}
+<form method="post"><label>Email</label><input name="email" type="email" placeholder="you@company.com" required><label>Password</label><input name="password" type="password" placeholder="Password" required><button class="primary full">Sign in</button></form>
+<div class="demo"><b>Demo accounts</b><br>Admin: admin@demo.com / admin123<br>Employee: employee@demo.com / employee123</div></main></body></html>
